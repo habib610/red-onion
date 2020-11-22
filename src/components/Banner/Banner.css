@@ -1,0 +1,38 @@
+.banner{
+    background:linear-gradient(45deg,rgba(243, 5, 5, 0.2), rgba(253, 81, 2, 0.2)),url("./../../bannerbackground.png");
+    height: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+    .searchBox {
+        border: 1px solid #ff004c;
+        border-radius: 20px;
+        outline: none;
+        width: 45vw;
+        padding:  10px 20px;
+    }
+    .banner h1{
+        font-size: 50px;
+    }
+    .foodSearchBtn{
+        border-radius: 20px;
+        padding:  10px 20px;
+        color: white;
+        background: #ff004c;
+        outline: none;
+        border: none;
+        transition: all linear 1s;
+        margin-left: -80px;
+    
+    }
+    .foodSearchBtn:hover{
+        background: #9c0230;
+    
+    }

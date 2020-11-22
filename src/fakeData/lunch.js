@@ -1,0 +1,51 @@
+const lunch =[
+    {"id": "13",
+    "name": "Healthy Meal Plan",
+    "shortDescription": "How we dream about our future",
+    "price": 23.99,
+    "details": "Gay one the what walk then she. Demsene mention promise you justice arrived way. Amaizing foods are  or and increasing to in especially inquietude companions acceeptance admiration. Out weight it families distance wandered yet",
+    "photo": "https://iili.io/2TCk1n.md.png",
+    "category": "lunch"
+    },
+    {"id": "14",
+    "name": "Fried Chicken Bento",
+    "shortDescription": "How we dream about our future",
+    "price": 9.99,
+    "details": "Gay one the what walk then she. Demsene mention promise you justice arrived way. Amaizing foods are  or and increasing to in especially inquietude companions acceeptance admiration. Out weight it families distance wandered yet",
+    "photo": "https://iili.io/2TCvgs.md.png",
+    "category": "lunch"
+    },
+    {"id": "15",
+    "name": "Tarragon-Rubbed-Salmon",
+    "shortDescription": "How we dream about our future",
+    "price": 6.99,
+    "details": "Gay one the what walk then she. Demsene mention promise you justice arrived way. Amaizing foods are  or and increasing to in especially inquietude companions acceeptance admiration. Out weight it families distance wandered yet",
+    "photo": "https://iili.io/2TCSdG.md.png",
+    "category": "lunch"
+    },
+    {"id": "16",
+    "name": "Indian Lunch",
+    "shortDescription": "How we dream about our future",
+    "price": 8.99,
+    "details": "At Bamboo Inn, we offer Free prawn crackers with food order over £18. FREE mini vegetable spring rolls with food order over night.",
+    "photo": "https://iili.io/2TCeqX.md.png",
+    "category": "lunch"
+    },
+    {"id": "17",
+    "name": "Beef Steak",
+    "shortDescription": "How we dream about our future",
+    "price": 15.99,
+    "details": "Gay one the what walk then she. Demsene mention promise you justice arrived way. Amaizing foods are  or and increasing to in especially inquietude companions acceeptance admiration. Out weight it families distance wandered yet",
+    "photo": "https://iili.io/2TCU7f.md.png",
+    "category": "lunch"
+    },
+    {"id": "18",
+    "name": "Hone-Soy-Glazed Salmon with Peppers",
+    "shortDescription": "How we dream about our future",
+    "price": 7.99,
+    "details": "Gay one the what walk then she. Demsene mention promise you justice arrived way. Amaizing foods are  or and increasing to in especially inquietude companions acceeptance admiration. Out weight it families distance wandered yet",
+    "photo": "https://iili.io/2TCge4.md.png",
+    "category": "lunch"
+    },
+    ]
+    export default lunch;
