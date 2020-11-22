@@ -15,11 +15,12 @@ class Food extends Component {
                                 <div className="card">
                                     <div className="card-img-top" >
                                         <Link to='/details'>
-                                            <div className="img-container d-flex justify-content-center py-2" onClick={()=> value.handleDetail(id)}>
+                                        <div className="img-container d-flex justify-content-center py-2" onClick={()=> value.handleDetail(id)}>
                                                 <img src={photo} className="img-fluid w-75" alt={name} />
                                             </div>
                                         </Link>
-                                        <h6 className="card-title text-center">{name}</h6>
+                                        <h5 className="card-title text-center">{name}</h5>
+                                        <p className="text-center">{shortDescription}</p>
                                         <div className="card-footer bg-transparent border-0">
                                             <h4 className="mb-0 text-warning">$<span>{price}</span></h4>
                                         </div>
