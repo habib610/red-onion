@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core';
 import React, { Component } from 'react';
 import {
     Link
@@ -22,7 +23,10 @@ class Food extends Component {
                                         <h5 className="card-title text-center">{name}</h5>
                                         <p className="text-center">{shortDescription}</p>
                                         <div className="card-footer bg-transparent border-0">
-                                            <h4 className="mb-0 text-warning">$<span>{price}</span></h4>
+                                           <Typography variant="h4" color="secondary">
+                                           $<span>{price}</span>
+                                           </Typography>
+                                        
                                         </div>
                                     </div>
                                 </div>

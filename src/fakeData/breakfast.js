@@ -1,4 +1,4 @@
-export const breakFastFood = [
+export const breakfast = [
     {
         id: 7,
         name: "Bagel and cream cheese",

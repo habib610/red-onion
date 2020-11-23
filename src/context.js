@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { createContext } from 'react';
-import { breakFastFood} from './fakeData/breakfast';
+import { breakfast} from './fakeData/breakfast';
 import { detailFood} from './fakeData/breakfast';
+import { dinner } from './fakeData/dinner';
+import { lunch } from './fakeData/lunch';
 const ProductContext = createContext()
 
 class ProductProvider extends Component {
@@ -16,11 +18,13 @@ class ProductProvider extends Component {
         cartTotal: 0,
     }
 componentDidMount(){
-    this.setFood();
+    this.setFood(breakfast);
 }
-setFood = () => {
+
+
+setFood = (breakfast) => {
 let tempFood = [];
-breakFastFood.forEach(item=>{
+breakfast.forEach(item=>{
     const singleFood = {...item};
     tempFood = [...tempFood, singleFood];
 })
@@ -28,6 +32,33 @@ breakFastFood.forEach(item=>{
         return {foods: tempFood}
     })
 }
+
+// setting three default function here
+breakfastItems = () =>{
+    this.setFood(breakfast)
+}
+lunchItems = () =>{
+    this.setFood(lunch)
+}
+dinnerItems = () =>{
+    this.setFood(dinner)
+}
+
+// ending three default function here 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //getItem by Id
 getItem = (id) => {
@@ -137,7 +168,7 @@ clearCart = () => {
     },
     ()=>{
     this.addTotal();
-    this.setFood();
+    this.setFood(breakfast);
     }
     )
     
@@ -183,6 +214,10 @@ addTotal = () => {
             decrement: this.decrement,
             removeItem: this.removeItem,
             clearCart: this.clearCart,
+
+            breakfastItems: this.breakfastItems,
+            lunchItems: this.lunchItems,
+            dinnerItems: this.dinnerItems,
             }
             }>
                 { this.props.children}

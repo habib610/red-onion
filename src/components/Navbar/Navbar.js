@@ -11,10 +11,10 @@ import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../../context';
 const styles = theme => ({
     root: {
-
+        paddingTop: "10px" 
     },
     logo: {
-        height: 50,
+        height: "10vh",
         paddingBottom: '10px'
     }
 });
@@ -24,8 +24,8 @@ class Navbar extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.root}>
-                <AppBar position="static" color="transparent">
+            <div >
+                <AppBar position="static" color="transparent" className={classes.root}>
                     <Container >
                         <Toolbar>
                             <Typography style={{ flexGrow: 1 }}>
@@ -49,7 +49,7 @@ class Navbar extends Component {
                             </ProductConsumer>
 
                             <Link to="/login"><Button color="secondary">Login</Button></Link>
-                            <Button color="secondary" variant="contained">Signup</Button>
+
                         </Toolbar>
                     </Container>
                 </AppBar>

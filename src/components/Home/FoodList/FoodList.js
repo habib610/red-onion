@@ -2,14 +2,13 @@ import { Container, Grid } from '@material-ui/core';
 import React, { Component } from 'react';
 import { ProductConsumer } from '../../../context';
 import Food from '../Food/Food';
-import Tabs from '../../Tabs/Tabs';
+import Tabs from '../../TabItem/TabItem';
 
 class FoodList extends Component {
     render() {
         return (
             <Container>
                 <Tabs/>
-                <h1>Hello From FoodList</h1>
                 <div className="row">
                 <ProductConsumer>
                     {

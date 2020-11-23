@@ -1,3 +1,4 @@
+import { counter } from '@fortawesome/fontawesome-svg-core';
 import { faCartPlus, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Typography } from '@material-ui/core';
@@ -5,14 +6,14 @@ import React, { Component } from 'react';
 import { ProductConsumer } from '../../../context';
 
 class FoodDetails extends Component {
+
     render() {
         return (
             <div className="container my-5">
            <ProductConsumer>
                {
                    value => {
-                       const { name, id, price, photo, details, inCart, count } = value.detailFood; 
-                    //    const {increment, decrement, removeItem} = value;
+                       const { name, id, price, photo, details, inCart } = value.detailFood; 
                    return (
                        <div className="row align-items-center">
                            <div className="col-md-6">
@@ -25,23 +26,20 @@ class FoodDetails extends Component {
                        </Typography>
                    </div>
                    
-                   {/* <div className=" d-flex  align-items-center border rounded-pill py-2 px-3">
-                        <Button color="secondary"><FontAwesomeIcon icon={faMinus}  /></Button> 
-                        <h5 className="mb-0 mx-2">{count}</h5>
-                        <Button color="secondary"><FontAwesomeIcon icon={faPlus} 
-                        onClick={()=> value.increment(id)}
-                        /></Button> 
-                   </div> */}
-
+              
+                  
                    </div>
                    <div>
                    <Button variant="contained" color="secondary" 
                    disabled={inCart ? true : false}
-                   onClick={()=>{
-                       value.addToCart(id)
-                   }}
+                   onClick={
+                    ()=>{
+                       value.addToCart(id);
+                   }
+                }
                    ><FontAwesomeIcon icon={faCartPlus} className="mr-2"/> {inCart ? "Added": "Add"}</Button>
                    </div>
+                   
                            </div>
                            <div className="col-md-6">
                                 <img src={photo} className="img-fluid" alt=""/>

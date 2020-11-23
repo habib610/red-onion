@@ -10,7 +10,6 @@ class CartItems extends Component {
                 {
                     value => {
                         const {cartSubTotal, cartTax, cartTotal, clearCart, deliveryFee} = value;
-                        console.log(clearCart)
                         return (
                             <Grid item container>
                                 {
