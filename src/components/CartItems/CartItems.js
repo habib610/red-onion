@@ -9,8 +9,8 @@ class CartItems extends Component {
             <ProductConsumer>
                 {
                     value => {
-                        console.log(value.cart);
-
+                        const {cartSubTotal, cartTax, cartTotal, clearCart, deliveryFee} = value;
+                        console.log(clearCart)
                         return (
                             <Grid item container>
                                 {
@@ -28,13 +28,9 @@ class CartItems extends Component {
                                 </Typography> 
                                 <Grid item md={12}>
                                     {
-                                        value.cart.map(item => <CartSingleItem key={item.id} item={item} />)
+                                        value.cart.map(item => <CartSingleItem key={item.id} item={item}  value={value} />)
                                     }
                                 </Grid>
-                                </div>
-                                    )
-                                }
-                                
 
                                 <div className="ml-auto">
                                     <div className="d-flex ">
@@ -42,19 +38,26 @@ class CartItems extends Component {
                                             Subtotal <br />
                                             Tax <br />
                                             Delivery Fee <br />
-                                            Tax <br />
                                             <strong>Total</strong>
                                         </Typography>
-                                        <Typography variant="body1">
-                                            00 <br />
-                                            00 <br />
-                                            00 <br />
-                                            00 <br />
-                                            <strong>00</strong>
+                                        <Typography variant="body1" color="secondary">
+                                            $ {cartSubTotal} <br />
+                                            $ {cartTax} <br />
+                                            $ {deliveryFee} <br />
+                            <strong >$ {cartTotal}</strong>
                                         </Typography>
                                     </div>
+                                    <Button variant="contained" color="secondary" className="mt-3"  fullWidth
+                                    onClick = {()=> clearCart()}
+                                    >Clear Cart</Button>
                                     <Button variant="contained" color="secondary" className="my-3" disabled fullWidth>Place Order</Button>
                                 </div>
+                                </div>
+                                    )
+                                }
+                                
+
+                              
                             </Grid>
                         )
                     }

@@ -9,6 +9,11 @@ class ProductProvider extends Component {
         foods: [],
         detailFood: detailFood,
         cart: [],
+
+        cartSubTotal: 0,
+        cartTax: 0,
+        deliveryFee: 0,
+        cartTotal: 0,
     }
 componentDidMount(){
     this.setFood();
@@ -51,15 +56,63 @@ addToCart = (id) => {
     const price = Food.price;
     Food.total = price
 
-    this.setState(()=>{
+    this.setState(
+        ()=>{
         return {
             foods: [...tempFood],
             cart: [...this.state.cart, Food],
             detailFood: {...Food}
         }
-    })
+    }
+    ,()=> this.addTotal()
+    )
 }
 
+
+// cart component functionality
+increment = (id) => {
+    console.log("Incrementing ", id);
+}
+
+decrement = (id) => {
+    console.log("Decrementing ", id);
+}
+
+removeItem = (id) => {
+    console.log("Item removed")
+}
+
+clearCart = () => {
+    this.setState(()=>{
+        return {cart: []}
+    },
+    this.setFood()
+    )
+}
+
+addTotal = () => {
+    let subTotal = 0;
+    let tempDeliveryFee = 9.9;
+    this.state.cart.map(item => (subTotal += item.total));
+    if (subTotal > 100) {
+        tempDeliveryFee = 0;
+    }
+
+    const tempTax = subTotal * 0.1;
+    const tax = parseFloat(tempTax.toFixed(2));
+    const tempTotal = subTotal + tax + tempDeliveryFee;
+    const total = parseFloat(tempTotal.toFixed(2))
+    
+    this.setState(()=>{
+        return {
+            cartSubTotal: subTotal,
+            cartTax: tax,
+            cartTotal: total,
+            deliveryFee: tempDeliveryFee
+        }
+    })
+        
+}
 
     render() {
         return (
@@ -67,7 +120,12 @@ addToCart = (id) => {
              {   
             ...this.state,
             handleDetail: this.handleDetail,
-            addToCart: this.addToCart
+            addToCart: this.addToCart,
+
+            increment: this.increment,
+            decrement: this.decrement,
+            removeItem: this.removeItem,
+            clearCart: this.clearCart
             }
             }>
                 { this.props.children}
