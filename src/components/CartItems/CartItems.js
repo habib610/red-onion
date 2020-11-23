@@ -32,6 +32,12 @@ class CartItems extends Component {
                                     }
                                 </Grid>
 
+                               
+                                </div>
+                                    )
+                                }
+                                
+
                                 <div className="ml-auto">
                                     <div className="d-flex ">
                                         <Typography variant="body1" className="mr-5">
@@ -49,15 +55,12 @@ class CartItems extends Component {
                                     </div>
                                     <Button variant="contained" color="secondary" className="mt-3"  fullWidth
                                     onClick = {()=> clearCart()}
+                                    disabled={value.cart.length ? false : true}
                                     >Clear Cart</Button>
-                                    <Button variant="contained" color="secondary" className="my-3" disabled fullWidth>Place Order</Button>
+                                    <Button variant="contained" color="secondary" className="my-3" 
+                                    disabled={value.cart.length ? false : true}
+                                    fullWidth>Place Order</Button>
                                 </div>
-                                </div>
-                                    )
-                                }
-                                
-
-                              
                             </Grid>
                         )
                     }

@@ -11,7 +11,8 @@ class FoodDetails extends Component {
            <ProductConsumer>
                {
                    value => {
-                       const { name, id, price, photo, details, inCart } = value.detailFood; 
+                       const { name, id, price, photo, details, inCart, count } = value.detailFood; 
+                    //    const {increment, decrement, removeItem} = value;
                    return (
                        <div className="row align-items-center">
                            <div className="col-md-6">
@@ -23,11 +24,15 @@ class FoodDetails extends Component {
                        ${price}
                        </Typography>
                    </div>
-                   <div className=" d-flex  align-items-center border rounded-pill py-2 px-3">
+                   
+                   {/* <div className=" d-flex  align-items-center border rounded-pill py-2 px-3">
                         <Button color="secondary"><FontAwesomeIcon icon={faMinus}  /></Button> 
-                        <h5 className="mb-0 mx-2">1</h5>
-                        <Button color="secondary"><FontAwesomeIcon icon={faPlus}  /></Button> 
-                   </div>
+                        <h5 className="mb-0 mx-2">{count}</h5>
+                        <Button color="secondary"><FontAwesomeIcon icon={faPlus} 
+                        onClick={()=> value.increment(id)}
+                        /></Button> 
+                   </div> */}
+
                    </div>
                    <div>
                    <Button variant="contained" color="secondary" 
