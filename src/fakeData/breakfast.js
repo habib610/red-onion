@@ -90,3 +90,8 @@ export const detailFood = {
         count: 0,
         total: 0
     };
+
+export const invalidUserDetails = {
+    name: 'Custom User Name',
+    email: 'Custom User Email Habibur@gmail.com'
+}

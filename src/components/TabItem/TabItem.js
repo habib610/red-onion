@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Tab, Tabs } from '@material-ui/core';
+import {  Tab, Tabs } from '@material-ui/core';
 import React, { Component } from 'react';
 import { ProductConsumer } from '../../context';
 

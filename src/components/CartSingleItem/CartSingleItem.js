@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 class CartSingleItem extends Component {
     render() {
-        const { name, id, price, photo, total, count } = this.props.item;
+        const { name, id, price, photo, count } = this.props.item;
         const {increment, decrement, removeItem} = this.props.value;
         return (
                 <div className="row align-items-center my-3 bg-light rounded py-2 rounded-pill">

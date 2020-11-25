@@ -1,5 +1,4 @@
-import { counter } from '@fortawesome/fontawesome-svg-core';
-import { faCartPlus, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Typography } from '@material-ui/core';
 import React, { Component } from 'react';
@@ -25,9 +24,6 @@ class FoodDetails extends Component {
                        ${price}
                        </Typography>
                    </div>
-                   
-              
-                  
                    </div>
                    <div>
                    <Button variant="contained" color="secondary" 
@@ -39,7 +35,6 @@ class FoodDetails extends Component {
                 }
                    ><FontAwesomeIcon icon={faCartPlus} className="mr-2"/> {inCart ? "Added": "Add"}</Button>
                    </div>
-                   
                            </div>
                            <div className="col-md-6">
                                 <img src={photo} className="img-fluid" alt=""/>

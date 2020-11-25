@@ -1,6 +1,5 @@
-import { Button, Container, Grid, makeStyles, TextField, Typography, withStyles } from '@material-ui/core';
+import { Button, Container, Grid,  TextField, Typography, withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
-import { ProductConsumer } from '../../context';
 import CartItems from '../CartItems/CartItems';
 
 const styles = theme => ({

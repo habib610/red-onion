@@ -16,6 +16,11 @@ class ProductProvider extends Component {
         cartTax: 0,
         deliveryFee: 0,
         cartTotal: 0,
+
+        userName: '',
+        userEmail: '',
+
+        testingName: ''
     }
 componentDidMount(){
     this.setFood(breakfast);
@@ -46,20 +51,6 @@ dinnerItems = () =>{
 
 // ending three default function here 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //getItem by Id
 getItem = (id) => {
     const food =  this.state.foods.find(item => item.id === id);
@@ -68,7 +59,6 @@ getItem = (id) => {
 
 // details
 handleDetail = (id) =>{
-    console.log("you clicked on image container", id)
    const food = this.getItem(id)
    this.setState(()=>{
        return {detailFood: food}
@@ -201,6 +191,21 @@ addTotal = () => {
         
 }
 
+    handleUserLogin = (details) => {
+
+   if(details.name !== '' && details.email !== '' ){
+    console.log (details.name)
+    console.log (details.email)
+    this.setState(()=>{
+        return {
+            userEmail: details.email,
+            userName: details.name
+        }
+    })
+   }
+    }
+
+
 
     render() {
         return (
@@ -218,6 +223,8 @@ addTotal = () => {
             breakfastItems: this.breakfastItems,
             lunchItems: this.lunchItems,
             dinnerItems: this.dinnerItems,
+
+            handleUserLogin: this.handleUserLogin,
             }
             }>
                 { this.props.children}

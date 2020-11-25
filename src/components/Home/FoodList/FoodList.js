@@ -1,4 +1,4 @@
-import { Container, Grid } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import React, { Component } from 'react';
 import { ProductConsumer } from '../../../context';
 import Food from '../Food/Food';
