@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
         color: "white"
     },
     link:{
-        color: "white"
+        color: "white",
+        display: 'block'
     }
 }));
 
@@ -28,62 +29,55 @@ const Footer = () => {
     return (
         <Box className={classes.root}>
             <Container >
-                <Grid container gutterBottom className={classes.footer}>
+                <Grid container  className={classes.footer}>
                     <Grid item sm={6} md={6}>
                         <img className={classes.logo} src="https://iili.io/2To1HJ.png" alt="" />
                     </Grid>
-                    <Grid item sm={6} md={3} direction="column">
-                        <Typography variant="body2"  >
-                            <Box>
-                                <Link href="#"  className={classes.link}> About Online Blog</Link>
-                            </Box>
-                            <Box>
-                                <Link href="#"  className={classes.link} >  Read Our Blog</Link>
-                            </Box>
-                            <Box>
-                                <Link href="#"  className={classes.link}> Signup to deliver</Link>
-                            </Box>
-                            <Box>
-                                <Link href="#"  className={classes.link}>Add Restaurant</Link>
-                            </Box>
+                    <Grid item sm={6} md={3} >
+                        <Typography variant="body1" >
+                            
+                                <Link to="/"  className={classes.link}>  About Online Blog</Link>
+                            
+                           
+                                <Link to="/"  className={classes.link} >  Read Our Blog</Link>
+                          
+                         
+                                <Link to="/"  className={classes.link}> Signup to deliver</Link>
+                            
+                        
+                                <Link to="/"  className={classes.link}>Add Restaurant</Link>
+
                         </Typography>
                     </Grid>
                     <Grid item sm={6} md={3}>
                         <Typography variant="body2" >
-                            <Box>
-                                <Link href="#" color="inherit"  className={classes.link}> Read FAQ's</Link>
-                            </Box>
-                            <Box>
-                                <Link href="#" color="inherit" className={classes.link}>Get Help</Link>
-                            </Box>
-                            <Box>
-                                <Link href="#" color="inherit" className={classes.link}> View All Cities</Link>
-                            </Box>
-                            <Box>
-                                <Link href="#" color="inherit" className={classes.link}>Restaurant near me</Link>
-                            </Box>
+                         
+                                <Link to="/" color="inherit"  className={classes.link}> Read FAQ's</Link>
+                                <Link to="/" color="inherit" className={classes.link}>Get Help</Link>
+                                <Link to="/" color="inherit" className={classes.link}> View All Cities</Link>
+                                <Link to="/" color="inherit" className={classes.link}>Restaurant near me</Link>
                         </Typography>
                     </Grid>
                     <Grid item container style={{ marginTop: "20px", padding: "10px", color: "white" }} sm={12} md={7} >
-                        <Grid sm={12} md={5}>
-                            <Typography variant="p">
+                        <Grid item sm={12} md={5}>
+                            <Typography variant="body1">
                                 Copyright Habib, All Right Reserved
                              </Typography>
                         </Grid>
                     </Grid>
                     <Grid item sm={12} md={5} container style={{ marginTop: "20px", padding: "10px", color: "white" }}>
-                        <Grid sm={6} md={5}>
-                            <Typography variant="p">
+                        <Grid item sm={6} md={5}>
+                            <Typography variant="body1">
                                 Terms and condition
                             </Typography>
                         </Grid>
-                        <Grid sm={6} md={4}>
-                            <Typography variant="p">
+                        <Grid item sm={6} md={4}>
+                            <Typography variant="body1">
                                 Privacy and policy
                             </Typography>
                         </Grid>
-                        <Grid sm={6} md={3}>
-                            <Typography variant="p">
+                        <Grid item sm={6} md={3}>
+                            <Typography variant="body1">
                                 Pricing
                             </Typography>
                         </Grid>

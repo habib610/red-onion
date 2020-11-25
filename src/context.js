@@ -4,7 +4,7 @@ import { breakfast} from './fakeData/breakfast';
 import { detailFood} from './fakeData/breakfast';
 import { dinner } from './fakeData/dinner';
 import { lunch } from './fakeData/lunch';
-const ProductContext = createContext()
+export const ProductContext = createContext()
 
 class ProductProvider extends Component {
     state = {
@@ -190,6 +190,7 @@ addTotal = () => {
     })
         
 }
+
 
     handleUserLogin = (details) => {
 

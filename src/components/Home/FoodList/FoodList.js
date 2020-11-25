@@ -2,13 +2,15 @@ import { Container } from '@material-ui/core';
 import React, { Component } from 'react';
 import { ProductConsumer } from '../../../context';
 import Food from '../Food/Food';
-import Tabs from '../../TabItem/TabItem';
+import TabItem from '../../TabItem/TabItem';
 
 class FoodList extends Component {
     render() {
         return (
             <Container>
-                <Tabs/>
+                <div className="row justify-content-center my-5">
+                <TabItem/>
+                </div>
                 <div className="row">
                 <ProductConsumer>
                     {

@@ -2,6 +2,7 @@ import { faCartPlus, } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Typography } from '@material-ui/core';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../../../context';
 
 class FoodDetails extends Component {
@@ -34,6 +35,7 @@ class FoodDetails extends Component {
                    }
                 }
                    ><FontAwesomeIcon icon={faCartPlus} className="mr-2"/> {inCart ? "Added": "Add"}</Button>
+                   <Link to="/"><Button variant="contained" color="primary" className="ml-2">Add More</Button></Link>
                    </div>
                            </div>
                            <div className="col-md-6">

@@ -4,3 +4,18 @@ a{
 button:focus{
   outline: none !important;
 }
+.hover{
+  color: #5a00af !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+.hover:hover{
+  text-decoration: underline;
+  color: orangered !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
+body{
+  overflow-x: hidden !important;
+}

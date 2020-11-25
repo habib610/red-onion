@@ -46,7 +46,6 @@ class Cart extends Component {
                     </Grid>
 
                     <Grid item md={2}></Grid>
-
                     <Grid item container md={5} >
                      <CartItems/>
                     </Grid>

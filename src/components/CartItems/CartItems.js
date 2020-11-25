@@ -1,5 +1,6 @@
 import { Button, Grid, Typography } from '@material-ui/core';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../../context';
 import CartSingleItem from '../CartSingleItem/CartSingleItem';
 
@@ -56,9 +57,11 @@ class CartItems extends Component {
                                     onClick = {()=> clearCart()}
                                     disabled={value.cart.length ? false : true}
                                     >Clear Cart</Button>
-                                    <Button variant="contained" color="secondary" className="my-3" 
+                                  <Link to="complete-order">
+                                  <Button variant="contained" color="secondary" className="my-3" 
                                     disabled={value.cart.length ? false : true}
                                     fullWidth>Place Order</Button>
+                                    </Link> 
                                 </div>
                             </Grid>
                         )

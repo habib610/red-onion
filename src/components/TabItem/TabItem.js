@@ -11,15 +11,11 @@ class TabItem extends Component {
         // const setSampleState = sampleState => this.setState({ sampleState });
         return (
             <ProductConsumer>
-
                 {
                         contextValue => {
                         const { breakfastItems, lunchItems, dinnerItems } = contextValue;
                         return (
-                            <div className="container my-5">
-                                <div className="row  justify-content-center">
-                                    <div className="col-12 text-center" >
-                                       <div >
+                           
                                        <Tabs 
                                        value={value}
                                        indicatorColor="secondary"
@@ -57,10 +53,6 @@ class TabItem extends Component {
                                             />
 
                                         </Tabs>
-                                       </div>
-                                    </div>
-                                </div>
-                            </div>
                         )
                     }
                 }

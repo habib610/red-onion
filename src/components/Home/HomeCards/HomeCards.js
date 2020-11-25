@@ -10,7 +10,7 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 const useStyles = makeStyles((theme) => ({
     root:{
-        // minWidth: 150
+        minWidth: 150
     },
     media: {
         height: 200,
@@ -41,19 +41,18 @@ const useStyles = makeStyles((theme) => ({
 const HomeCards = () => {
     const classes = useStyles();
     return (
-        <div>
             <Container>
                 <Grid container>
                     <Grid item sm={12} md={4}>
                         <Typography variant="h4" >
                             Why Choose Us
                         </Typography>
-                        <Typography variant="p" >
+                        <Typography variant="body1" >
                             Barton waited twenty always repair in within we do. an delighted offending curiosity my is dash woods at. Boy prosperous increasing surrounded.
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid  container spacing={6} style={{ marginTop: '20px' }} >
+                <Grid  container spacing={3} style={{ marginTop: '20px' }} >
                     <Grid item sm={6} md={4}>
                         <Card className={classes.root}>
                             <CardMedia
@@ -65,7 +64,7 @@ const HomeCards = () => {
                                     <DirectionsBusIcon className={classes.foodIcon} />
                                 </IconButton>
                                 <Box>
-                                    <Typography variant="body" gutterBottom color="textPrimary" component="h2">
+                                    <Typography variant="body1" gutterBottom color="textPrimary" component="h2">
                                         Home Delivery
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
@@ -91,7 +90,7 @@ const HomeCards = () => {
                                     <NotificationsActiveIcon className={classes.foodIcon} />
                                 </IconButton>
                                 <Box>
-                                    <Typography variant="body" gutterBottom color="textPrimary" component="h2">
+                                    <Typography variant="body1" gutterBottom color="textPrimary" component="h2">
                                         A Good Auto Responder
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
@@ -117,7 +116,7 @@ const HomeCards = () => {
                                 <LocalShippingIcon className={classes.foodIcon} />
                                 </IconButton>
                                 <Box>
-                                    <Typography variant="body" gutterBottom color="textPrimary" component="h2">
+                                    <Typography variant="body1" gutterBottom color="textPrimary" component="h2">
                                     Fast Delivery
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
@@ -134,7 +133,7 @@ const HomeCards = () => {
                    
                 </Grid>
             </Container>
-        </div>
+
     );
 };
 
