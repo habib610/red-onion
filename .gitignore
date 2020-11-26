@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+src/components/Login/Firebase.Config.js
 # production
 /build
 
