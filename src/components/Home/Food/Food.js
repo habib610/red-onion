@@ -9,7 +9,7 @@ import { ProductConsumer } from '../../../context';
 class Food extends Component {
     render() {
         const { name, id, shortDescription, price, photo, inCart } = this.props.item;
-        const notify = (name) => toast.dark(`${name} Added`);
+        const notify = (name) => toast(`${name} Added`);
         return (
             <div className="col-10 mx-auto  col-md-6 col-lg-4 mb-5">
                 <ProductConsumer>

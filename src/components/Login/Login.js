@@ -186,11 +186,9 @@ const Login = () => {
       // An error happened.
     });
         }
-  console.log(newUser)
   return (
     <ProductConsumer>
       {(value) => {
-       
         return (
           <Container className={classes.root}>
             <Grid container justify="center" alignItems="center" spacing={2}>
