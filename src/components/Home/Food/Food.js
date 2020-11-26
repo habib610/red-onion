@@ -1,12 +1,15 @@
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Typography } from '@material-ui/core';
 import React, { Component } from 'react';
-import {
-    Link
-} from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { Link} from "react-router-dom";
 import { ProductConsumer } from '../../../context';
 class Food extends Component {
     render() {
-        const { name, id, shortDescription, price, photo } = this.props.item;
+        const { name, id, shortDescription, price, photo, inCart } = this.props.item;
+        const notify = (name) => toast.dark(`${name} Added`);
         return (
             <div className="col-10 mx-auto  col-md-6 col-lg-4 mb-5">
                 <ProductConsumer>
@@ -14,12 +17,23 @@ class Food extends Component {
                         value => {
                             return (
                                 <div className="card">
+                                      <div>
+        <ToastContainer
+        autoClose={2000}
+        />
+      </div>
                                     <div className="card-img-top" >
-                                        <Link to='/details'>
                                         <div className="img-container d-flex justify-content-center py-2" onClick={()=> value.handleDetail(id)}>
-                                                <img src={photo} className="img-fluid w-75" alt={name} />
-                                            </div>
+                                        <Link to='/details'>
+                                                <img src={photo} className="card-img-top" alt={name} />
                                         </Link>
+                                        <button className="cart-btn" disabled={inCart ? true : false} onClick={() => {
+                                value.addToCart(id);
+                                notify(name)
+                            }}>
+                                {inCart ? <p className="text-capitalize mb-0"  >Added</p> : <FontAwesomeIcon icon={faCartPlus} />}
+                            </button>
+                                            </div>
                                         <h5 className="card-title text-center">{name}</h5>
                                         <p className="text-center">{shortDescription}</p>
                                         <div className="card-footer bg-transparent border-0">

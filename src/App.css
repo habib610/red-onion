@@ -19,3 +19,41 @@ a:hover{
 body{
   overflow-x: hidden !important;
 }
+
+.img-container{
+  position: relative;
+  overflow: hidden;
+}
+.cart-btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  outline: none;
+  font-weight: 700;
+  background-color: #f50057;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: transparent;
+  transform: translate(100%, 10%);
+  transition: linear .6s;
+  color: #fff;
+}
+.card-img-top{
+  transition: linear .6s;
+}
+.img-container:hover .card-img-top{
+  transform: scale(1.1);
+}
+.img-container:hover .cart-btn{
+  transform: translate(-0%, 0%);
+
+}
+.cart-btn:hover{
+  background-color: #b92a5c;
+}
+.card{
+  transition: all linear .5s;
+}
+.card:hover{
+  box-shadow: -17px 21px 25px -15px rgba(0, 0, 0, 0.356);
+}
