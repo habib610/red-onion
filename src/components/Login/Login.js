@@ -279,7 +279,7 @@ const Login = () => {
                   </div>
                 </Grid>
                 <Grid>
-                  <div
+                  {/* <div
                     className="d-flex algin-items-center border justify-content-around rounded-pill  py-2 px-5"
                     type="button"
                   >
@@ -289,7 +289,7 @@ const Login = () => {
                       alt=""
                     />
                     <p className="mb-0  bolded">Continue With Facebook</p>
-                  </div>
+                  </div> */}
                 </Grid>
               </Grid>
             </Grid>
