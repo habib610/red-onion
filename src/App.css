@@ -35,11 +35,11 @@ body{
   border-radius: 5px;
   border: transparent;
   transform: translate(100%, 10%);
-  transition: linear .6s;
+  transition: linear .3s;
   color: #fff;
 }
 .card-img-top{
-  transition: linear .6s;
+  transition: linear .3s;
 }
 .img-container:hover .card-img-top{
   transform: scale(1.1);
@@ -52,7 +52,7 @@ body{
   background-color: #b92a5c;
 }
 .card{
-  transition: all linear .5s;
+  transition: all linear .3s;
 }
 .card:hover{
   box-shadow: -17px 21px 25px -15px rgba(0, 0, 0, 0.356);

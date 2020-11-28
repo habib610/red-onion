@@ -10,12 +10,14 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 const useStyles = makeStyles((theme) => ({
     root:{
-        minWidth: 150
+        maxWidth: 350,
+        '& .MuiButton-root':{
+            margin: '20px 0'
+        }
     },
     media: {
         height: 200,
         paddingTop: '70.25%', // 16:9
-
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -42,7 +44,7 @@ const HomeCards = () => {
     const classes = useStyles();
     return (
             <Container>
-                <Grid container>
+                <Grid container >
                     <Grid item sm={12} md={4}>
                         <Typography variant="h4" >
                             Why Choose Us
@@ -52,7 +54,7 @@ const HomeCards = () => {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid  container spacing={3} style={{ marginTop: '20px' }} >
+                <Grid  container spacing={3} justify="center" style={{ marginTop: '20px' }} >
                     <Grid item sm={6} md={4}>
                         <Card className={classes.root}>
                             <CardMedia
@@ -71,7 +73,7 @@ const HomeCards = () => {
                                         This impressive paella is a perfect party dish and a fun meal to cook together with your
                                         guests. Add 1 cup of frozen peas along with the mussels, if you like.
                                     </Typography>
-                                    <Button color="secondary">
+                                    <Button color="secondary" variant="contained">
                                         Show More
                                     </Button>
                                 </Box>
@@ -97,7 +99,7 @@ const HomeCards = () => {
                                         This impressive paella is a perfect party dish and a fun meal to cook together with your
                                         guests. Add 1 cup of frozen peas along with the mussels, if you like.
                                     </Typography>
-                                    <Button color="secondary">
+                                    <Button color="secondary" variant="contained">
                                         Show More
                                 </Button>
                                 </Box>
@@ -123,7 +125,7 @@ const HomeCards = () => {
                                         This impressive paella is a perfect party dish and a fun meal to cook together with your
                                         guests. Add 1 cup of frozen peas along with the mussels, if you like.
                                     </Typography>
-                                    <Button color="secondary">
+                                    <Button color="secondary" variant="contained">
                                         Show More
                                 </Button>
                                 </Box>

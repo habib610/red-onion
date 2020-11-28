@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../../context";
 import CartSingleItem from "../CartSingleItem/CartSingleItem";
-
+import PayPalButton from './../Cart/PayPalButton'
 class CartItems extends Component {
   render() {
+
     return (
       <ProductConsumer>
         {(value) => {
+     
           const {
             cartSubTotal,
             cartTax,
@@ -25,7 +27,7 @@ class CartItems extends Component {
               ) : (
                 <div>
                   <Typography variant="body1">
-                    From{" "}
+                    From
                     <span>
                       <strong>Gulsan Plaza Restaurant GPR</strong>
                     </span>{" "}
@@ -65,16 +67,26 @@ class CartItems extends Component {
                 >
                   Clear Cart
                 </Button>
-                <Link to="complete-order">
+              
+                <Link to="/complete-order">
                   <Button
                     variant="contained"
                     color="secondary"
                     className="my-3"
-                    disabled={value.cart.length ? false : true}
+                    disabled={value.cart.length && value.deliveryDetails ? false : true}
                     fullWidth
+                    onClick ={()=> clearCart()}
                   >
-                    Place Order
+                  Hand Cash Checkout
                   </Button>
+           
+                  
+                  {
+                    value.cart.length && value.deliveryDetails ? <PayPalButton  total={cartTotal} clearCart={clearCart} history="/cart" /> : ""
+                  }
+                  
+             
+                  
                 </Link>
               </div>
             </Grid>

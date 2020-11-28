@@ -7,7 +7,6 @@ import { ProductConsumer } from '../../../context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 class FoodDetails extends Component {
-
     render() {
         return (
             <div className="container my-5">

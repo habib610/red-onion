@@ -19,8 +19,9 @@ class ProductProvider extends Component {
 
         userName: '',
         userEmail: '',
+        
+        deliveryDetails: ''
 
-        testingName: ''
     }
 componentDidMount(){
     this.setFood(breakfast);
@@ -206,6 +207,14 @@ addTotal = () => {
    }
     }
 
+    handleDeliveryDetails = (details) => {
+    this.setState(()=>{
+        return {
+            deliveryDetails: details
+        }
+    })
+}
+
 
 
     render() {
@@ -226,6 +235,8 @@ addTotal = () => {
             dinnerItems: this.dinnerItems,
 
             handleUserLogin: this.handleUserLogin,
+
+            handleDeliveryDetails: this.handleDeliveryDetails
             }
             }>
                 { this.props.children}

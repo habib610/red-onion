@@ -66,7 +66,7 @@ export const breakfast = [
 
     {
         id: 12,
-        name: "Full breakfasrt Fried Egg Toast Brunch",
+        name: "Full breakfast Fried Egg Toast Brunch",
         shortDescription: "How we dream about our future",
         price: 3.99,
         details: "Gay one the what walk then she. Demsene mention promise you justice arrived way. Amaizing foods are  or and increasing to in especially inquietude companions acceeptance admiration. Out weight it families distance wandered yet",
