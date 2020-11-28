@@ -9,6 +9,7 @@ One page E-commerce website for restaurant where you can order your favorite foo
 * Authentication system
 * Cart Add/Remove system
 * Paypal payment gateway
+* Completely Responsive
 
 ## Technology
 JavaScript, React.Js, Firebase, Material-UI,Bootstrap, HTML5, CSS3
